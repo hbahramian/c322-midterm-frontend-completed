@@ -17,7 +17,7 @@
       <li class="right"><a href="#about">About</a></li>
     </ul>
 
-    <form onsubmit="add()">
+    <form>
       <!-- Question Text -->
       <label for="questionText">Question:</label><br />
       <textarea
@@ -53,7 +53,7 @@
       <input type="text" id="optionCText" name="optionC" required /><br />
 
       <!-- Submit Button -->
-      <input type="submit" value="Add The Question"  />
+      <input type="button" value="Add The Question" onclick="add()" />
     </form>
 
     <div id="list" class="cards"></div>
@@ -151,6 +151,7 @@
           message = "Something went wrong! Question data could not be saved.";
         }
         alert(message);
+        location.href = "add-question.html";
       }
 
       async function submitTheImage(id, imageFile) {
