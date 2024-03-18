@@ -89,7 +89,7 @@
         let score = 0;        
         for(let i = 0; i < quiz.questions.length; i++) {
             let q = quiz.questions[i];
-            if(q.answer == userAnswers.get(i)) {
+            if(q.answer.trim() == userAnswers.get(i).trim()) {
                 score += 1;
             }            
         }        
