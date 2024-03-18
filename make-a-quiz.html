@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="cards.css" />
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="make-a-quiz.css" />
   </head>
   <body>
     <ul class="topnav">
@@ -134,6 +134,11 @@
         else {
           alert("The quiz was not saved. Something went wrong.")
         }
+      }
+
+      async function saveTheQuizAndNew() {
+        await saveTheQuiz();
+        location.href = "make-a-quiz.html";
       }
     </script>
   </body>
